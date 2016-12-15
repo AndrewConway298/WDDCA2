@@ -1,0 +1,55 @@
+<p>
+    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['page 1']">Navigate via Markup</a>
+</p>
+<p>
+    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['page 2']">Navigate via Markup</a>
+</p>
+<p>
+    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['page 3']">Navigate via Markup</a>
+</p>
+<div class="container">
+    <h2>BMI Calculator</h2>
+    <form class="form-horizontal" name="convert">
+        <h5>Enter your weight</h5>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="stone">Stone</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="stone" name="stone" (keyup.enter)="BMIConversion()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pounds">Pounds</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="pounds" name="pounds" (keyup.enter)="BMIConversion()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="kilograms">Or KG</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="kilograms" name="kilograms" (keyup.enter)="BMIConversion()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+        <h5>Enter your height</h5>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="feet">Feet</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="feet" name="feet" (keyup.enter)="BMIConversion()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inches">Inches</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="inches" name="inches" (keyup.enter)="BMIConversion()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="metres">Or Metres</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="metres" name="metres" (keyup.enter)="BMIConversion()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+    </form>
+    <p>
+        <button (click)="BMIConversion()">Convert</button>
+    </p>
+</div>

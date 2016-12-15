@@ -1,0 +1,31 @@
+<p>
+    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['page 1']">Navigate via Markup</a>
+</p>
+<p>
+    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['page 2']">Navigate via Markup</a>
+</p>
+<p>
+    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['page 3']">Navigate via Markup</a>
+</p>
+<div class="container">
+    <h2>Temperature Unit Convertor</h2>
+    <h8>*Convert button will convert from C to F not visa versa</h8>
+    <form class="form-horizontal" name="convert">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="celsius">Celsius:</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="celsius" name="celsius" (keyup.enter)="CelsiusToFarhenheit()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fahrenheit">Fahrenheit:</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="fahrenheit" name="fahrenheit" (keyup.enter)="FarhenheitToCelsius()" type="number" step="any" class="form-control" placeholder="Enter a number">
+            </div>
+        </div>
+    </form>
+    <p>
+        <button (click)="CelsiusToFarhenheit()">Convert</button>
+    </p>
+</div>
+    
